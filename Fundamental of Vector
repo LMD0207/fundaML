@@ -1,1 +1,33 @@
+# https://fundaml.com/course/5990a766cdc6e32b3b4d0666/lesson/5990aa22cdc6e32b3b4d0667/5990bbb6cdc6e32b3b4d0669
 
+import numpy as np 
+
+def myavg(x):
+    """
+    :type x: a 1d array
+    :rtype: None
+    """
+    # number of elements in x 
+    d = x.shape[0]
+    # create a variable to store sum of all elements
+    res = 0 
+    for i in range(d):
+      # TODO: add the i-th element of x to res
+      res += x[i]
+      # -- end TODO --
+    # take average
+    m = res/d
+    # assign this new value to every element of x
+    for i in range(d):
+      # TODO: assign m to every element of x 
+      x[i] = m
+      # -- end TODO -- 
+    
+
+# create a 1d array
+x = np.array([1., 2, 3, 4, 5, 6, 7, 8, 9, 10])
+myavg(x)
+print(x)
+
+# Output:
+# [ 5.5  5.5  5.5  5.5  5.5  5.5  5.5  5.5  5.5  5.5]
